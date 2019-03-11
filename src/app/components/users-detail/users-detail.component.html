@@ -1,0 +1,17 @@
+<h1 mat-dialog-title> {{user.name}}</h1>
+<div mat-dialog-content>
+  <mat-form-field class="display-block">
+    <input matInput [(ngModel)]="user.name" placeholder="Full Name" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.username" placeholder="Username" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.password" placeholder="Password" type="password" required>
+  </mat-form-field>
+  <mat-checkbox class="display-block" [(ngModel)]="user.admin">Admin</mat-checkbox>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()" class="cancel-button"><mat-icon class="cancel-icon">cancel</mat-icon></button>
+  <button mat-button (click)="onSave()" class="save-button" [mat-dialog-close]="user"><mat-icon class="save-icon">check_circle</mat-icon></button>
+</div>

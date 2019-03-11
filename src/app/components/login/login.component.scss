@@ -1,0 +1,76 @@
+@import '../../../styles.scss';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.back-login {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: url('https://www.creativedrive.com/wp-content/themes/creative_drive/img/bg-contact.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    
+    
+    .login {
+        width: 390px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+        padding-top: 30px;
+        background-color: #fff;
+        color: #000;
+        box-shadow: $boxOrange;
+        justify-content: center;
+        animation: boxShadowColor 4s alternate-reverse infinite;
+
+        .title {
+            background-color: #000;
+            width: 100%;
+            padding: 5%;
+            margin-top: -8%;
+        }
+
+        form {
+            width: 100%;
+            border-radius: 10px;
+            background-color: #fff;
+            padding-bottom: 33px;
+            margin-top: 3%;
+
+            mat-form-field {
+                display: block;
+
+                input {
+                    padding-left: 10px;
+                }
+                
+            }
+
+            .form-actions {
+                display: flex;
+                justify-content: center;
+
+                .mat-raised-button {
+                    border-radius: 10px;
+                    background: linear-gradient(to bottom right, rgb(122,25,255), rgb(255,122,25));
+                    width: 50%;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

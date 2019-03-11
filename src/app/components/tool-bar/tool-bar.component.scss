@@ -1,0 +1,56 @@
+@import '../../../styles.scss';
+
+.header {
+    width: 100%;
+    height: 7%;
+    background-color: #000;
+    box-shadow: $boxOrange;
+    color: #fff;
+    justify-content: center;
+    &:hover {
+        animation: boxShadowColor 4s alternate-reverse infinite;
+
+        .logo {
+            clip: rect(0px, 200px, 200px, 0px);    
+        }            
+    }
+
+    .logo {
+        left: 10px;
+        max-width: 160px;
+        position: absolute;
+        clip: rect(0px, 40px, 200px, 0px);
+        transition: all 0.5s ease-out;
+    }
+
+    .mat-button {
+        font: normal 16px/19px "Montserrat", sans-serif;
+        background: linear-gradient(to left, #000 50%, rgb(255,122,25) 50%);
+        background-size: 200% 100%;
+        background-position:right bottom;
+        transition:all 0.7s ease;
+        height: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        &:hover {
+            background-position:left bottom;
+
+            & mat-divider {
+                display: none;
+            }    
+        }
+
+        & mat-divider.active {
+            background-color: rgb(255,122,25);
+            height: 2px;
+        }
+
+    }
+
+    .mat-button.logoff {
+        right: 0;
+        position: absolute;
+    }
+    
+}

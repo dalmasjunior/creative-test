@@ -1,0 +1,16 @@
+<div class="back-login">
+    <div class="login">
+      <img src="https://www.creativedrive.com/wp-content/themes/creative_drive/img/logos/creativedrive.png" class="title">
+      <form>
+          <mat-form-field>
+              <input matInput [(ngModel)]="username" placeholder="Username" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)]="password" type="password" placeholder="Password" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <div class="form-actions">
+              <button mat-raised-button (click)="login()">Login</button>
+            </div>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<app-tool-bar></app-tool-bar>
+<div class="users-list">
+  <h1 class="title">Creative Users <button *ngIf="isAdmin" (click)="newUser()" mat-icon-button color="accent" aria-label="Add new user" matTooltip="Add new user"><mat-icon>add_circle_outline</mat-icon></button></h1>
+
+  <mat-list>
+    <mat-list-item *ngFor="let user of usersList" (click)="isAdmin ? openDetail(user.username) : false">
+      <img matListAvatar src='https://material.angular.io/assets/img/examples/shiba1.jpg'>
+      <h3 matLine>{{user.name}}</h3>
+      <button mat-button *ngIf="isAdmin">Edit</button>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>

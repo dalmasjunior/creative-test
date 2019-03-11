@@ -1,0 +1,52 @@
+.display-block {
+    display: block;
+}
+
+.mat-dialog-content {
+    min-height: 170px;
+}
+
+
+.mat-dialog-actions {
+    justify-content: center;
+    
+    .cancel-button {
+        &:before {
+            content: "Cancel"
+        }
+        &:hover {
+            background-color: rgb(244, 67, 54);
+            &::before {
+                content: "";
+            }
+            mat-icon.cancel-icon, .cancel-icon svg {
+                color: #fff;
+                display: inline-block;
+            }
+        }
+
+        .cancel-icon {
+            display: none;
+        }
+    }
+
+    .save-button {
+        &::before {
+            content: "Save"
+        }
+        &:hover {
+            background-color: rgb(54, 244, 67);
+            &::before {
+                content: "";
+            }
+            mat-icon.save-icon, .save-icon svg {
+                color: #fff;
+                display: inline-block;
+            }
+        }
+
+        .save-icon {
+            display: none;
+        }
+    }
+}

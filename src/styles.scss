@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+$boxOrange: 5px 5px 10px rgba(255,122,25, 0.8);
+$boxPurple: 5px 5px 10px rgba(122,25,255,0.8);
+
+html, body { height: 100%; }
+body { margin: 0; font-family:"Montserrat", sans-serif; background-color: #000; color: #fff; }
+
+.title {
+    font: 600 26px/45px "Montserrat", sans-serif;
+}
+
+@keyframes boxShadowColor {
+    0% {
+        box-shadow: 5px 5px 10px rgba(25, 255, 122, 0.8);
+    }
+    50% {
+        box-shadow: $boxPurple
+    }
+    100% {
+        box-shadow: $boxOrange;
+    }
+}

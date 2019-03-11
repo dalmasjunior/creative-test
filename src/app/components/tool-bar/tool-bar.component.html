@@ -1,0 +1,5 @@
+<mat-toolbar class="header">
+  <img src="https://www.creativedrive.com/wp-content/themes/creative_drive/img/logos/creativedrive.png" class="logo">
+  <a mat-button routerLink="['/users']">Users<mat-divider [ngClass]="{'active': activeUsers}"></mat-divider></a>
+  <a mat-button (click)="logoff()" class="logoff">Logoff</a>
+</mat-toolbar>
